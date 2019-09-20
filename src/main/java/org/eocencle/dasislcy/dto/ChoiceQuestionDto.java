@@ -2,6 +2,8 @@ package org.eocencle.dasislcy.dto;
 
 import org.eocencle.dasislcy.entity.ChoiceQuestionEntity;
 import org.eocencle.dasislcy.entity.ChoiceQuestionOptionEntity;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,11 +22,12 @@ public class ChoiceQuestionDto extends ChoiceQuestionEntity {
         this.setId(entity.getId());
         this.setType(entity.getType());
         this.setTitle(entity.getTitle());
+        this.setAnswer(entity.getAnswer());
         this.setCreateTime(entity.getCreateTime());
         this.setUpdateTime(entity.getUpdateTime());
     }
 
-    private List<ChoiceQuestionOptionEntity> options;
+    private List<ChoiceQuestionOptionEntity> options = new ArrayList<>();
 
     public List<ChoiceQuestionOptionEntity> getOptions() {
         return options;
